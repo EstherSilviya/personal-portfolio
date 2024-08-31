@@ -1,0 +1,888 @@
+* {
+    padding: 0;
+    margin: 0; 
+ }
+ 
+ body{
+     background-color: rgb(8, 8, 8);
+ }
+ 
+ 
+ 
+ .navigation-menu {
+     display: flex;
+     align-items: center;
+     justify-content: flex-end;
+     padding: 20px;
+     background-color:rgb(8, 8, 8);
+     
+ }
+ 
+ .menu {
+     display: flex;
+     align-items: center;
+ }
+ 
+ .menu ul {
+     display: flex;
+     flex-direction: row;
+ }
+ 
+ .menu ul li {
+     list-style-type: none;
+     display: inline-block;
+ }
+ 
+ .menu ul li a {
+     color: #f8f6f6;
+     font-size: 20px;
+     padding: 10px 25px;
+     border-radius: 50px;
+     transition: 0.2s;
+     margin: 0px 5px;
+     text-decoration: none;
+ }
+ 
+ .menu ul li.active a, 
+ .menu ul li a:hover  {
+     color: #0b0b0b;
+     background: #6bbebd;
+ }
+ 
+ 
+ .hamburger {
+     display: none;
+     cursor: pointer;
+     flex-direction: column;
+     gap: 4px;
+ }
+ 
+ .hamburger .line {
+     width: 25px;
+     height: 3px;
+     background-color: #fff;
+ }
+ 
+ .home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background: var(--bg-color);
+    margin-top: 150px ;
+ }
+
+ .home .home-content h1{
+    font-size: 3rem;
+    font-weight: 600;
+    line-height:1.3;
+    color: white;
+    font-style: italic;
+ }
+
+ h1 span{
+    color: #6bbebd;
+    font-style: normal;
+ }
+
+ .home-content h2{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: white;
+ }
+
+ .home-img{
+    border-radius: 50%;
+ }
+
+ .home-img img{
+    position: relative;
+    width: 32vw;
+    box-shadow: 0 0 25px #6bbebd;
+    cursor: pointer;
+    max-width: 300px;
+    max-height: 360px;
+    border-radius: 75%;
+    margin-bottom: 50px;
+ }
+
+ .home-img img:hover{
+    transform: scale(1.01);
+    filter: drop-shadow(0 0 25px #6bbebd);
+ }
+
+ .home-content p{
+    font-size: 20px;
+    color: white;
+    line-height: 1.3;
+ }
+ 
+ .social-icon a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width:3rem;
+    height: 3rem;
+    background: transparent;
+    border: 0.2rem solid #6bbebd;
+    font-size: 2rem;
+    border-radius: 50%;
+    color: #6bbebd;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    text-decoration: none;
+ }
+
+.social-icon a:hover{
+    color:white;
+    transform: scale(1.3)translate(-5px);
+    background: #6bbebd;
+    box-shadow: 0 0 25px #6bbebd;
+}
+
+
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: rgb(8, 8, 8);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: var(--bg-color);
+    border: 2px solid #6bbebd;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: #6bbebd;
+    margin-left: 10px;
+}
+
+ 
+.btn:hover{
+    transform: scale(1.03);
+    background-color:#6bbebd ;
+    color:rgb(5, 5, 5);
+    box-shadow: 0 0 25px #6bbebd;
+}
+
+#typing {
+    font-size: 34px;
+    font-family: Arial, sans-serif;
+    white-space: pre-wrap;
+    color:#6bbebd;
+}
+
+@media (max-width: 500px) {
+    .home {
+        gap: 1rem; 
+    }
+
+    .home-content h1 {
+        font-size: 1.8rem; 
+    }
+
+    .home-content h2 {
+        font-size: 1.6rem; 
+    }
+
+    .home-img img {
+        max-width: 250px; 
+        max-height: 300px;
+        margin-right: 30px;
+    }
+
+    .social-icon {
+        gap: 0.5rem; 
+    }
+
+    .btn {
+        padding: 0.6rem 1.2rem; 
+        font-size: 1.2rem; 
+    }
+
+    #typing {
+        font-size: 1.4rem; 
+    }
+}
+
+@media (min-width: 768px) {
+    .home {
+        flex-direction: row; 
+        gap: 8rem;
+    }
+}
+
+.about {
+    display: flex;
+    justify-content: space-between; /* Adjusts space between the two sections */
+    align-items: flex-start; 
+    margin: 100px 160px;
+    gap: 40px; 
+}
+
+.about-me {
+    max-width: 50%; 
+}
+
+.about-me h1 {
+    font-size: 3.8rem;
+    color: #6bbebd;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.about-me p {
+    color: white;
+    max-width: 100%;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 20px;
+}
+
+.bio {
+    max-width: 45%; /* Adjusted for better alignment with .about-me */
+}
+
+.box {
+    box-sizing: border-box;
+    color: white;
+    padding: 20px; /* Added padding for better spacing */
+    background-color: #333; /* Added background color */
+    border: 1px solid #6bbebd;
+    border-radius: 10px; /* Rounded corners */
+    margin-top: 40px;
+}
+
+.box ul {
+    padding: 0;
+    margin: 0;
+}
+
+.box ul li {
+    text-align: justify;
+    list-style: none;
+    margin-bottom: 10px; /* Added space between list items */
+    line-height: 1.5;
+    font-size: 20px;
+}
+
+.box:hover{
+    transform: scale(1.03);
+    background-color:#333 ;
+    color:rgb(248, 245, 245);
+    box-shadow: 0 0 25px #6bbebd;
+}
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column; /* Stack elements vertically */
+        margin: 40px 20px; /* Reduced margin for smaller screens */
+        gap: 20px; /* Adjust gap between sections */
+        align-items: center; /* Center items */
+    }
+
+    .about-me, .bio {
+        max-width: 100%; /* Full width for both sections */
+        text-align: center; /* Center-align text for neatness */
+    }
+
+    .about-me h1 {
+        font-size: 2.8rem; /* Reduced font size */
+        margin-bottom: 15px; /* Adjust margin */
+    }
+
+    .about-me p {
+        font-size: 18px; /* Slightly smaller font */
+        line-height: 1.4;
+    }
+
+    .bio .box {
+        padding: 15px; /* Reduced padding */
+        margin-top: 20px; /* Less margin above box */
+    }
+
+    .box ul li {
+        font-size: 18px; /* Adjusted font size */
+        margin-bottom: 8px; /* Adjust spacing */
+        line-height: 1.4;
+    }
+}
+
+/* Further adjustments for screens below 500px */
+@media (max-width: 500px) {
+    .about {
+        margin: 20px 10px; /* Further reduced margin */
+        gap: 10px; /* Minimal gap */
+    }
+
+    .about-me h1 {
+        font-size: 2.2rem; /* Further reduced font size */
+    }
+
+    .about-me p, .box ul li {
+        font-size: 16px; /* Smaller font size */
+    }
+
+    .bio .box {
+        padding: 10px; /* Minimal padding */
+    }
+}
+
+
+/* Main heading */
+.heading {
+    color: #d4e1e1;
+    text-align: center;
+    font-size: 3.8rem;
+    font-weight: 600;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px #6bbebd;
+}
+
+/* Two-column layout for education and experience */
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px; /* Adjust gap as needed */
+    padding: 0 150px; /* Align the content with the heading */
+}
+
+/* Styling for each column */
+.col header.title {
+    font-family: helvetica;
+    color: #6bbebd;
+    padding: 0px 0px 20px 0px;
+    margin: 0;
+}
+
+.contents {
+    margin: 0;
+}
+
+.col .contents {
+    padding: 0px 30px;
+    border-left: 2px solid #bababa;
+}
+
+.col .contents .box {
+    position: relative;
+    padding: 20px;
+    border: 1px solid #6bbebd;
+    background-color: #333;
+    cursor: pointer;
+    transition: all 0.4s;
+    margin-bottom: 20px;
+}
+
+.col .contents .box:hover {
+    box-shadow: 0px 3px 12px 0px #6bbebd;
+    border: 1px solid transparent;
+}
+
+.col .contents .box::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    right: calc(100% + 22px);
+    top: 0;
+    background-color: #6bbebd;
+    border: 2px solid white;
+}
+
+.box h4 {
+    position: relative;
+    color: #6bbebd;
+    font-size: 1.3rem;
+}
+
+.box h3 {
+    font-size: 1.4rem;
+    padding: 10px 0px 6px;
+    font-family: helvetica;
+    color: #6bbebd;
+}
+
+.box p {
+    line-height: 1.5;
+    color: white;
+    font-size: 1.2rem;
+}
+@media (max-width: 1024px) {
+    .row {
+        padding: 0 50px; /* Reduce padding on medium screens */
+    }
+}
+
+@media (max-width: 767px) {
+    .row {
+        grid-template-columns: 1fr; /* Stack columns vertically */
+        padding: 0 30px; /* Further reduce padding */
+    }
+
+    .heading {
+        font-size: 3rem; /* Adjust heading size */
+    }
+
+    .col .contents {
+        padding: 0 20px; /* Reduce padding within content */
+        border-left: none; /* Remove border on smaller screens */
+    }
+
+    .col .contents .box {
+        margin-bottom: 15px; /* Reduce gap between boxes */
+    }
+}
+
+@media (max-width: 480px) {
+    .heading {
+        font-size: 2.5rem; 
+    }
+
+    .col header.title h1, .col header.title h2 {
+        font-size: 1.5rem; 
+    }
+
+    .box h4 {
+        font-size: 1.1rem; 
+    }
+
+    .box h3 {
+        font-size: 1.2rem; 
+    }
+
+    .box p {
+        font-size: 1rem; 
+    }
+}
+/* Skills Heading */
+.skillheading {
+    color: #6bbebd;
+    text-align: center;
+    font-size: 3.8rem;
+    margin: 50px 0;
+}
+
+/* Skill Row */
+.skill-row {
+    display: flex; /*
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 20px; /* Adjusts the space between each item */
+    justify-content: center; 
+    align-items: center; 
+    margin: 0px 200px;
+}
+
+/* Frontend Header */
+.skill-row h2 {
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 50px;
+    width: 100%; /* Takes full width to place the heading above the row */
+}
+
+/* Highlighted Span */
+.skill-row h2 span {
+    color: #6bbebd;
+}
+
+/* Frontend Items */
+.frontend {
+    text-align: center;
+    flex: 1 1 10%; /* Makes each item flexible within the row */
+    min-width: 120px; /* Minimum size to keep the layout consistent */
+    max-width: 150px; /* Optional to control size */
+    color: white;
+    margin-bottom: 50px;
+}
+
+/* Frontend Images */
+.frontend img {
+    max-width: 41%; 
+    height: auto; 
+    margin: 20px 0; 
+}
+
+.skillheading {
+    color: #6bbebd;
+    text-align: center;
+    font-size: 3.8rem;
+    margin: 50px 0;
+}
+
+/* Skill Row */
+.skill-row {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 20px; /* Adjusts the space between each item */
+    justify-content: center; 
+    align-items: center; 
+    margin: 0px 100px; /* Reduced margin for better responsiveness */
+}
+
+/* Frontend Header */
+.skill-row h2 {
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 50px;
+    width: 100%; /* Takes full width to place the heading above the row */
+}
+
+/* Highlighted Span */
+.skill-row h2 span {
+    color: #6bbebd;
+}
+
+/* Frontend Items */
+.frontend {
+    text-align: center;
+    flex: 1 1 150px; /* Makes each item flexible within the row */
+    max-width: 150px; /* Control size for uniformity */
+    color: white;
+    margin-bottom: 50px;
+}
+
+/* Frontend Images */
+.frontend img {
+    max-width: 50%; /* Increased width for better visibility */
+    height: auto; 
+    margin: 20px 0; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skill-row {
+        margin: 0 40px; /* Reduced margin for smaller screens */
+        gap: 15px; /* Adjust space between items */
+    }
+
+    .skill-row h2 {
+        font-size: 2.5rem; /* Slightly smaller font for headings */
+        margin-bottom: 30px;
+    }
+
+    .frontend {
+        flex: 1 1 120px; /* Slightly smaller flex basis */
+        max-width: 120px; /* Reduce size for smaller screens */
+        margin-bottom: 30px;
+    }
+
+    .frontend img {
+        max-width: 60%; /* Slightly increased icon size */
+    }
+}
+
+@media (max-width: 500px) {
+    .skillheading {
+        font-size: 2.8rem; /* Reduced heading size for smaller screens */
+        margin: 30px 0;
+    }
+
+    .skill-row {
+        margin: 0 20px; /* Further reduced margin */
+        gap: 10px; /* Minimal gap */
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .skill-row h2 {
+        font-size: 2rem; /* Smaller font size for subheadings */
+        margin-bottom: 20px;
+    }
+
+    .frontend {
+        flex: 1 1 100px; /* Further reduced size for smaller devices */
+        max-width: 100px; /* Keep items smaller */
+        margin-bottom: 20px;
+    }
+
+    .frontend img {
+        max-width: 70%; /* Slightly larger for better visibility */
+    }
+}
+
+
+ @media (max-width: 767px) {
+     .menu {
+         display: none;
+         flex-direction: column;
+         width: 100%;
+         text-align: center;
+         background-color: rgb(14, 11, 16);
+     }
+ 
+     .menu ul {
+         flex-direction: column;
+         width: 100%;
+     }
+ 
+     .menu ul li {
+         display: block;
+         width: 100%;
+     }
+ 
+     .hamburger {
+         display: flex;
+     }
+ 
+     .menu.active {
+         display: flex;
+     }
+ 
+     /* Remove active state on small screens */
+     .menu ul li.active a {
+         color: #fefefe;
+         background: none;
+ }
+ 
+ }
+ 
+
+ /* Styles for the Project Section */
+.project {
+    padding: 20px;
+    background-color: rgb(8, 8, 8y);
+}
+
+/* Styles for the Card */
+.card {
+    background-color: rgb(30, 29, 29); 
+    border: 1px solid  rgb(8, 8, 8);
+    border-radius: 12px; 
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 600px; 
+    margin: 0 auto; /* Center the card */
+    text-align: center; 
+    max-width: 400px;
+    max-height: 900px;
+    margin-bottom: 30px;
+    flex: 1 1 calc(33.33% - 20px); 
+}
+
+.card:hover{
+    transform: scale(1.03);
+    background-color:#333 ;
+    color:rgb(248, 245, 245);
+    box-shadow: 0 0 25px #6bbebd;
+}
+
+.project{
+    display: flex;
+    flex-wrap: wrap;
+    flex:1;
+    justify-content: center;
+    padding: 20px;
+}
+
+#Projects {
+    width: 100%;
+    text-align: center; 
+    margin: 40px; 
+    color: #6bbebd;
+    font-size: 3rem;
+}
+
+#Projects h1{
+    color: #6bbebd;
+    font-size: 3rem;
+}
+/* Styles for the Heading */
+.card h1 {
+    font-size: 24px;
+    color: #e9f1f1; 
+    margin-bottom: 10px;
+}
+
+.card p{
+    color:white;
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    
+}
+
+/* Style-]s for the Image */
+.card img {
+    max-width: 100%; 
+    border-radius: 10px; 
+    margin-bottom: 15px; 
+}
+
+/* Styles for the Button */
+#github-btn ,#demo-btn{
+    padding: 10px 20px;
+    font-size: 16px;
+    color: black;
+    background-color: #6bbebd; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: white 0.3s ease; /* Smooth transition on hover */
+    display: inline-block; 
+    margin: 10px 10px;
+    cursor: pointer;
+}
+
+#github-btn:hover, #demo-btn:hover{
+    background-color: #fffefe;
+    color:rgb(13, 12, 12);
+}
+
+@media (max-width: 1024px) {
+    .card {
+        flex: 1 1 calc(50% - 40px); /* Two cards per row */
+        max-width: 100%; /* Prevent overflow */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 20px); /* Two cards per row with reduced margin */
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        flex: 1 1 calc(100% - 20px); /* One card per row */
+        margin: 10px 0; /* Margin adjusted for smaller screens */
+    }
+
+    #Projects {
+        font-size: 2.5rem; /* Reduced heading size */
+        margin: 20px; /* Adjusted margin */
+    }
+
+    .card h1 {
+        font-size: 20px; /* Smaller font size */
+    }
+
+    .card p {
+        font-size: 15px; /* Smaller font size */
+    }
+}
+
+.contact {
+    background-color: rgb(8,8,8);
+    padding: 2rem;
+    text-align: center;
+}
+
+.headingcontact {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.headingcontact span {
+    color: #6bbebd;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.input-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    gap: 12px;
+}
+
+.input-box input,
+textarea {
+    width: 48%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: #2c2f36;
+    color: #fff;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+}
+
+.contact .btn {
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #6bbebd;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.contact .btn:hover {
+    background-color: #009999;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-section img{
+    max-width: 20px;
+    max-height: 20px;
+    display: block;
+    margin-top: 10px;
+    align-items: center;
+}
+
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom:5px;
+    color: #6bbebd;
+}
+
+.footer-section p, .footer-section a  {
+    color: #bbb;
+    text-decoration: none;
+    margin: 5px 5px;
+    display: inline-block;
+}
+
+.footer-section a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    background-color: #222;
+    padding: 10x 0;
+    margin-top: 20px;
+    max-height:100px;
+    
+}
+
+.footer-bottom p {
+    margin: 0 ;
+    font-size: 14px;
+}
+
